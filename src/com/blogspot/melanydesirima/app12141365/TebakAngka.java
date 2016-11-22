@@ -43,19 +43,26 @@ public static void main(String[] args) {
                     System.out.println("Anda mempunyai kesempatan menebak 5 kali.");
                     int AngKaAcak=acakAngka.nextInt(NilaiLevel); 
                     
+                    for(Kesempatan=0;Kesempatan<=5;Kesempatan++){
+                        if(Kesempatan==5){
+                            System.out.println("GAMEOVER! Anda Gagal");
+                            GameOver++;
+                        }
+                        
+                    }
                     
                     if(GameOver>0){
                         break;
                     }
-
+                    
                     if(Level==5){ 
                         break;
                     }
                     else{
-                    ArrayNilai[StarNilaiO]=VarNilai;   
+                    ArrayNilai[StarNilaiO]=VarNilai; 
                     System.out.println("Ketik 'next' dan tekan enter untuk lanjut ke Level berikutnya atau ketik 'exit' untuk keluar : ");
                     nextLevel=input1.nextLine(); 
-                    Level++;
+                    Level++; 
                     
                     }
                    
@@ -66,7 +73,7 @@ public static void main(String[] args) {
             for(int rO=0; rO<5; rO++){
                 VariabelNilai=VariabelNilai+ArrayNilai[rO];  
             }
-            score.add(VariabelNilai);           
+            score.add(VariabelNilai);  
         }        
         while(!"y".equals(Y));
         int jumPemain=player.size();
