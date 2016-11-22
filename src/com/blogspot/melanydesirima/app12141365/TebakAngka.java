@@ -24,6 +24,11 @@ public static void main(String[] args) {
             Y=input1.nextLine();
             player.add(Y);
                 
+            int VariabelNilai = 0;
+            int VarNilai=0;
+            int GameOver=0;
+            int ArrayNilai[]= new int[6];
+            
             
         }        
         while(!"y".equals(Y));
