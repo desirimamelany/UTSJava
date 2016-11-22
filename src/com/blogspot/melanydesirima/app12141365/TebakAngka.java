@@ -28,10 +28,16 @@ public static void main(String[] args) {
             int VarNilai=0;
             int GameOver=0;
             int ArrayNilai[]= new int[6];
-            
+
+            if(!("y").equals(Y)){  
+                String nextLevel;
+                int Level=1;
+                System.out.println("Selamat datang " + Y);
+  
+
+            } 
             
         }        
         while(!"y".equals(Y));
-        
     }
 }
