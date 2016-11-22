@@ -44,42 +44,37 @@ public static void main(String[] args) {
                     int AngKaAcak=acakAngka.nextInt(NilaiLevel); 
                     
                     
-                    // Jika GameOver, game over dideteksi dari looping ke-6 yang tidak memunculkan input
-                    // jawaban, tetapi langsung memberikan nilai ke CekGameOver,
                     if(GameOver>0){
                         break;
                     }
-                    // Level 5 adalah Level Maksimal
-                    if(Level==5){ // Jika sudah Mencapai Level 5, langsung di break/otomatis Exit
+
+                    if(Level==5){ 
                         break;
                     }
                     else{
-                    ArrayNilai[StarNilaiO]=VarNilai; // Membuat Array Nilai   
+                    ArrayNilai[StarNilaiO]=VarNilai;   
                     System.out.println("Ketik 'next' dan tekan enter untuk lanjut ke Level berikutnya atau ketik 'exit' untuk keluar : ");
-                    nextLevel=input1.nextLine(); // inputan next level atau exit
-                    Level++; // Level bertambah setelah input Next Level
+                    nextLevel=input1.nextLine(); 
+                    Level++;
                     
                     }
                    
                 }
                 while(!"exit".equals(nextLevel));
               
-            // ------------------- END OF SCRIPT GAME TEBAK
-            } // Stop Looping Nama Pemain
-            // Ngolah Nilai
-            for(int rO=0; rO<5; rO++){ // membuat array nilai pada tiap level, untuk kemudian dijumlahkan
+            } 
+            for(int rO=0; rO<5; rO++){
                 VariabelNilai=VariabelNilai+ArrayNilai[rO];  
             }
-            score.add(VariabelNilai); // Menambahkan Nilai Akhir pada masing masing peserta
-            // SCORE SEMENTARA          
+            score.add(VariabelNilai);           
         }        
         while(!"y".equals(Y));
-        int jumPemain=player.size(); // Mengambil jumlah Rercord dalam array, dan untuk menghilangkan y paling belakang pada loop dikurangi 1 (-1)
+        int jumPemain=player.size();
         System.out.println("SCORE AKHIR");
         System.out.println("=================================");
         int l;
         for(l=0;l<jumPemain-1;l++){
-            System.out.println(player.get(l) + " : " + score.get(l)); // Menampilkan Skore di Akhir permainan
+            System.out.println(player.get(l) + " : " + score.get(l));
         }
     }
 }
