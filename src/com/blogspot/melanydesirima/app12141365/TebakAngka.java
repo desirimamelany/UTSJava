@@ -48,7 +48,27 @@ public static void main(String[] args) {
                             System.out.println("GAMEOVER! Anda Gagal");
                             GameOver++;
                         }
-                        
+                        else{  
+                            System.out.println("Tebakan Anda ? " + AngKaAcak);
+                            int Tebakan=input2.nextInt();
+                            int Kurang=4-Kesempatan;
+                            if(Tebakan==AngKaAcak){
+                                
+                                int NeTebak=Kesempatan+1;
+                                System.out.println("Selamat Anda berhasil menebak Angka dalam " + NeTebak + " kali tebakan. Sekor anda adalah " + VarNilai);
+                                break;
+
+                            }
+                            else{
+                                if(Tebakan>AngKaAcak){
+                                    System.out.println("Tebakan Anda terlalu Besar! Anda mempunyai kesempatan " + Kurang + " kali lagi" ); // Jika Tebakan lebih besar dari angka random
+                                }
+                                else{
+
+                                    System.out.println("Tebakan Anda terlalu Kecil! Anda mempunyai kesempatan " + Kurang + " kali lagi" ); // Jika tebakan lebih kecil dari angka random
+                                }
+                            }
+                        }
                     }
                     
                     if(GameOver>0){
