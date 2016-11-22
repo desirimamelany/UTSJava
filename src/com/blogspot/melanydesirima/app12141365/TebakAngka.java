@@ -56,19 +56,19 @@ public static void main(String[] args) {
                                 
                                 switch (Kesempatan) {
                                     case 0:
-                                        VarNilai=Level*100; // 1 x tebak, level x kan 100
+                                        VarNilai=Level*100;
                                         break;
                                     case 1:
-                                        VarNilai=Level*70; // 2 x tebak, level x kan 70
+                                        VarNilai=Level*70;
                                         break;
                                     case 2:
-                                        VarNilai=Level*50; // 3 x tebak, level x kan 50
+                                        VarNilai=Level*50; 
                                         break;
                                     case 3:
-                                        VarNilai=Level*30; // 4 x tebak, level x kan 30
+                                        VarNilai=Level*30;
                                         break;
                                     default:
-                                        VarNilai=0; // 5 x tebak, level x kan 0
+                                        VarNilai=0;
                                         break;
                                 }
                                 
