@@ -54,6 +54,24 @@ public static void main(String[] args) {
                             int Kurang=4-Kesempatan;
                             if(Tebakan==AngKaAcak){
                                 
+                                switch (Kesempatan) {
+                                    case 0:
+                                        VarNilai=Level*100; // 1 x tebak, level x kan 100
+                                        break;
+                                    case 1:
+                                        VarNilai=Level*70; // 2 x tebak, level x kan 70
+                                        break;
+                                    case 2:
+                                        VarNilai=Level*50; // 3 x tebak, level x kan 50
+                                        break;
+                                    case 3:
+                                        VarNilai=Level*30; // 4 x tebak, level x kan 30
+                                        break;
+                                    default:
+                                        VarNilai=0; // 5 x tebak, level x kan 0
+                                        break;
+                                }
+                                
                                 int NeTebak=Kesempatan+1;
                                 System.out.println("Selamat Anda berhasil menebak Angka dalam " + NeTebak + " kali tebakan. Sekor anda adalah " + VarNilai);
                                 break;
@@ -70,11 +88,11 @@ public static void main(String[] args) {
                             }
                         }
                     }
-                    
+
                     if(GameOver>0){
                         break;
                     }
-                    
+
                     if(Level==5){ 
                         break;
                     }
@@ -82,26 +100,23 @@ public static void main(String[] args) {
                     ArrayNilai[StarNilaiO]=VarNilai; 
                     System.out.println("Ketik 'next' dan tekan enter untuk lanjut ke Level berikutnya atau ketik 'exit' untuk keluar : ");
                     nextLevel=input1.nextLine(); 
-                    Level++; 
-                    
-                    }
-                   
+                    Level++;      
+                    }                   
                 }
                 while(!"exit".equals(nextLevel));
-              
             } 
-            for(int rO=0; rO<5; rO++){
+            for(int rO=0; rO<5; rO++){ 
                 VariabelNilai=VariabelNilai+ArrayNilai[rO];  
             }
-            score.add(VariabelNilai);  
+            score.add(VariabelNilai);                      
         }        
         while(!"y".equals(Y));
-        int jumPemain=player.size();
+        int jumPemain=player.size(); 
         System.out.println("SCORE AKHIR");
         System.out.println("=================================");
         int l;
         for(l=0;l<jumPemain-1;l++){
-            System.out.println(player.get(l) + " : " + score.get(l));
+            System.out.println(player.get(l) + " : " + score.get(l)); 
         }
     }
 }
