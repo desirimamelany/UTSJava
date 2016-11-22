@@ -6,12 +6,18 @@ package com.blogspot.melanydesirima.app12141365;
  * @author Desi Rima Melany
  */
 
+import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class TebakAngka {
 public static void main(String[] args) {
-        ArrayList <String> player = new ArrayList<>(); // Membuat array Nama Pemain
-        ArrayList <Integer> score = new ArrayList<>(); // Membuat array Sekor Pemain
+        ArrayList <String> player = new ArrayList<>();
+        ArrayList <Integer> score = new ArrayList<>();
+        Scanner input1 = new Scanner(System.in);
+        Scanner input2= new Scanner(System.in);
+        Random acakAngka=new Random();
+        
         
     }
 }
